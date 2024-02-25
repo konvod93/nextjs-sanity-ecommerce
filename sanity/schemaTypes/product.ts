@@ -31,6 +31,16 @@ export default {
             name: "price",
             title: "Price",
             type: "number",
+        },
+        {
+            name: "category",
+            title: "Product Category",
+            type: "reference",
+            to: [
+                {
+                    type: "category",
+                }
+            ]
         }
     ]
 }
