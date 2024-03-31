@@ -14,7 +14,8 @@ async function getData(slug: string) {
           name,
           description,
           "slug": slug.current,
-          "categoryName": category->name
+          "categoryName": category->name,
+          price_id
       }
     `;
 
@@ -75,6 +76,7 @@ export default async function ProductPage({ params, }: {params: {slug: string}})
                   name={data.name}
                   price={data.price}
                   key={data._id}
+                  price_id={data.price_id}
                 />
                 <Button variant={"secondary"}>Checkout Now</Button>
               </div>
